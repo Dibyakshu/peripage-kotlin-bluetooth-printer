@@ -1,6 +1,6 @@
-# PeriPage Printer Library
+# PeriPage Bluetooth Printer Library
 
-The **PeriPage Printer Library** is a utility library designed to facilitate the process of connecting and printing content on PeriPage portable printers via Bluetooth. This library provides easy-to-use functions for converting text and images into a format compatible with PeriPage printers and handling Bluetooth communication.
+The **PeriPage Bluetooth Printer Library** is a utility library designed to facilitate the process of connecting and printing content on PeriPage portable printers via Bluetooth. This library provides easy-to-use functions for converting text and images into a format compatible with PeriPage printers and handling Bluetooth communication.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -24,10 +24,36 @@ Portable thermal printers, such as the PeriPage printer, have become popular for
 
 ## Installation
 
+### Option 1: Manual Installation
+
 To use the PeriPage Printer Library in your Android project, follow these steps:
 
 1. Clone this repository or download the library files.
 2. Include the library in your project by adding the necessary source files to your Android Studio project.
+
+### Option 2: JitPack Installation
+
+Add the JitPack repository to your project's build file. Open your root build.gradle and add the following lines at the end of the `repositories` block:
+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
+```
+
+Then, add the library as a dependency in your app module's build.gradle file:
+
+```groovy
+dependencies {
+    implementation 'com.github.Dibyakshu:peripage-kotlin-bluetooth-printer:Tag'
+}
+```
+
+Replace `'Tag'` with the desired version or release tag.
 
 ## Usage
 
