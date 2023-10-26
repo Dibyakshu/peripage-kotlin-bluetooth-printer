@@ -49,11 +49,23 @@ Then, add the library as a dependency in your app module's build.gradle file:
 
 ```groovy
 dependencies {
-    implementation 'com.github.Dibyakshu:peripage-kotlin-bluetooth-printer:Tag'
+    implementation 'com.github.Dibyakshu:peripage-kotlin-bluetooth-printer:1.0.0'
 }
 ```
 
-Replace `'Tag'` with the desired version or release tag.
+Replace `1.0.0` with the desired version or release tag.
+
+### Note: Important Printer Name Configuration
+
+Make sure to change the printer name to match the name shown while pairing with your PeriPage printer. For example, "PPG_A2_3DC4" is the name of the Bluetooth device for PeriPage A2.
+
+In the `BluetoothHelper.kt` class within the `PeriPagePrinterLibrary` module in the `peripageprinterlibrary`, you can find the printer name configuration:
+
+```kotlin
+private val printerName: String = "PPG_A2_3DC4"
+```
+
+Please update this value to match your specific PeriPage printer's Bluetooth name.
 
 ## Usage
 
