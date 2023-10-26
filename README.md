@@ -218,4 +218,4 @@ Contributions to this library are welcome. If you have suggestions, feature requ
 
 ## License
 
-This PeriPage Printer Library is provided under the [MIT License](LICENSE). You are free to use and modify the code according to the terms of
+This PeriPage Printer Library is provided under the [MIT License](LICENSE). You are free to use and modify the code according to the terms of the license.
