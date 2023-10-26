@@ -84,6 +84,19 @@ The library handles Bluetooth permissions for you. It checks for permission base
 - `checkAndRequestBluetoothPermission()`: Checks and requests Bluetooth permissions as needed.
 - `onRequestPermissionsResult()`: Handles the result of the permission request.
 
+Here's how to handle permissions in your activity class:
+
+```kotlin
+override fun onRequestPermissionsResult(
+    requestCode: Int,
+    permissions: Array<out String>,
+    grantResults: IntArray
+) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    bluetoothHelper.onRequestPermissionsResult(requestCode, grantResults)
+}
+```
+
 ### Connecting to the Printer
 
 To connect to the PeriPage printer, use the `connectPrinter()` function. It checks if the printer is already connected and attempts to establish a Bluetooth connection if not.
@@ -110,6 +123,15 @@ val fontSize = 20F
 val fontId = R.font.courier_new
 val bitmap = bluetoothHelper.messageToBitmap(text, fontId, fontSize)
 bluetoothHelper.printImage(bitmap)
+```
+
+### Printing Image
+
+To print an image, prepare a `Bitmap` object containing the image you want to print, and then use the `printImage()` function to send the bitmap data to the printer for printing.
+
+```kotlin
+// Assuming you have a bitmap named "imageBitmap" containing the image to print
+bluetoothHelper.printImage(imageBitmap)
 ```
 
 ### Printing Feeds
@@ -156,8 +178,12 @@ if (!bluetoothHelper.isPrinterConnected()) {
 val text = "Hello, PeriPage Printer!"
 val fontSize = 20F
 val fontId = R.font.courier_new
-val bitmap = bluetoothHelper.messageToBitmap(text, fontId, fontSize)
-bluetoothHelper.printImage(bitmap)
+val textBitmap = bluetoothHelper.messageToBitmap(text, fontId, fontSize)
+bluetoothHelper.printImage(textBitmap)
+
+// Print an image
+// Assuming you have a bitmap named "imageBitmap" containing the image to print
+bluetoothHelper.printImage(imageBitmap)
 
 // Print feed lines
 val linesToFeed = 3
@@ -174,4 +200,4 @@ Contributions to this library are welcome. If you have suggestions, feature requ
 
 ## License
 
-This PeriPage Printer Library is provided under the [MIT License](LICENSE). You are free to use and modify the code according to the terms of the license.
+This PeriPage Printer Library is provided under the [MIT License](LICENSE). You are free to use and modify the code according to the terms of
