@@ -160,6 +160,9 @@ Here are some usage examples for the PeriPage Printer Library:
 // Initialize the BluetoothHelper
 val bluetoothHelper = BluetoothHelper(appActivity, context)
 
+// Thread for calling printing functions 
+val scope = CoroutineScope(Dispatchers.IO)
+
 // Check and request Bluetooth permissions if necessary
 bluetoothHelper.checkAndRequestBluetoothPermission()
 
@@ -179,16 +182,22 @@ val text = "Hello, PeriPage Printer!"
 val fontSize = 20F
 val fontId = R.font.courier_new
 val textBitmap = bluetoothHelper.messageToBitmap(text, fontId, fontSize)
-bluetoothHelper.printImage(textBitmap)
+scope.launch {
+    bluetoothHelper.printImage(textBitmap)
+}
 
 // Print an image
-// Assuming you have a bitmap named "imageBitmap" containing the image to print
-bluetoothHelper.printImage(imageBitmap)
+val imageBitmap: Bitmap = //Some Bitmap
+scope.launch {
+    bluetoothHelper.printImage(imageBitmap)
+}
 
 // Print feed lines
 val linesToFeed = 3
 val printBlankLines = true
-bluetoothHelper.printFeed(linesToFeed, printBlankLines)
+scope.launch {
+    bluetoothHelper.printFeed(linesToFeed, printBlankLines)
+}
 
 // Disconnect from the printer
 bluetoothHelper.disconnectPrinter()
