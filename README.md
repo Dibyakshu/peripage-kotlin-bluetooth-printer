@@ -130,10 +130,11 @@ bluetoothHelper.printImage(bitmap)
 To print an image, prepare a `Bitmap` object containing the image you want to print, and then use the `printImage()` function to send the bitmap data to the printer for printing.
 
 ```kotlin
-val imageBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+val imageBitmap = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888)
 val paint = Paint()
 paint.color = Color.RED
 val canvas = Canvas(imageBitmap)
+canvas.drawCircle(50f, 50f, 40f, paint)
 
 bluetoothHelper.printImage(imageBitmap)
 ```
@@ -191,7 +192,7 @@ scope.launch {
 }
 
 // Print an image
-val imageBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+val imageBitmap = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888)
 val paint = Paint()
 paint.color = Color.RED
 val canvas = Canvas(imageBitmap)
