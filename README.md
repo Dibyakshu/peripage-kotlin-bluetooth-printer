@@ -67,6 +67,23 @@ private val printerName: String = "PPG_A2_3DC4"
 
 Please update this value to match your specific PeriPage printer's Bluetooth name.
 
+### AndroidManifest Permissions
+
+In your AndroidManifest.xml file, make sure to include the following permissions for Bluetooth communication:
+
+```xml
+<uses-permission
+    android:name="android.permission.BLUETOOTH"
+    android:maxSdkVersion="30" />
+
+<uses-permission
+    android:name="android.permission.BLUETOOTH_ADMIN"
+    android:maxSdkVersion="30" />
+
+<!-- for Android 12 and above -->
+<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+```
+
 ## Usage
 
 ### Initialization
