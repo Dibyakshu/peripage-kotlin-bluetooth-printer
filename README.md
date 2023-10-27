@@ -1,6 +1,16 @@
-# PeriPage Bluetooth Printer Library
+<h1 align="center">PeriPage Bluetooth Printer Library.</h1><br>
 
-The **PeriPage Bluetooth Printer Library** is a utility library designed to facilitate the process of connecting and printing content on PeriPage portable printers via Bluetooth. This library provides easy-to-use functions for converting text and images into a format compatible with PeriPage printers and handling Bluetooth communication.
+<p align="center">
+  <a href="https://nodejs.org/">
+    <img src="https://play-lh.googleusercontent.com/AyXXAA3KG0a-kotzaaMoilo7SPC9sOTQnuHnhksmzEjcvxpsUn-oknNoKIYpk7by2Tqz" alt="Peripage logo" height="140">
+  </a>
+</p>
+
+<p align="center">  
+    The PeriPage Bluetooth Printer Library is a utility library designed to facilitate the process of connecting and printing content on PeriPage portable printers via Bluetooth. This library provides easy-to-use functions for converting text and images into a format compatible with PeriPage printers and handling Bluetooth communication.
+</p>
+
+----
 
 ## Table of Contents
 - [Introduction](#introduction)
