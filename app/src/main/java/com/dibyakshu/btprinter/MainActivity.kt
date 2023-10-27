@@ -55,7 +55,6 @@ class MainActivity : AppCompatActivity() {
 
             CoroutineScope(Dispatchers.IO).launch {
                 val isPrinted = bluetoothFn.printImage(bitMapText)
-                //val isPrinted1 = bluetoothFn.printImage(resImg!!, 1.5F, 0.75F)
                 if (isPrinted) {
                     // Message printed successfully.
                 } else {
