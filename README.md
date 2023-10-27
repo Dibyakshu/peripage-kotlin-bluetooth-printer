@@ -1,4 +1,4 @@
-<h1 align="center">PeriPage Bluetooth Printer Library.</h1><br>
+<h1 align="center">PeriPage Bluetooth Printer Library</h1><br>
 
 <p align="center">
     <a href = "https://github.com/Dibyakshu/peripage-kotlin-bluetooth-printer">
