@@ -1,7 +1,9 @@
 <h1 align="center">PeriPage Bluetooth Printer Library.</h1><br>
 
 <p align="center">
-    <img src="https://play-lh.googleusercontent.com/AyXXAA3KG0a-kotzaaMoilo7SPC9sOTQnuHnhksmzEjcvxpsUn-oknNoKIYpk7by2Tqz" alt="Peripage logo" height="140">
+    <a href = "https://github.com/Dibyakshu/peripage-kotlin-bluetooth-printer">
+        <img src="https://play-lh.googleusercontent.com/AyXXAA3KG0a-kotzaaMoilo7SPC9sOTQnuHnhksmzEjcvxpsUn-oknNoKIYpk7by2Tqz" alt="Peripage logo" height="140">
+    </a>
 </p>
 
 <p align="center">  
